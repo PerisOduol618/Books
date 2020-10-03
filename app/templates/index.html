@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+<!-- {% import 'macros.html' as macro %} -->
+
+
+
+
+{% block content %}
+<h1 class="text-center">Books</h1>
+<div class="continer">
+    <div class="row">
+        {% for program in programming_books%}
+        <div class="col-md-4">
+            <h3>{{ program.title}}</h3>
+            <p>{{ program.description}}</p>
+            <img src="{{program.thumbnail}}" alt="">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Programming books -->
+
+
+
+<!-- Business News  -->
+<!-- <h3 class="text text-center text-primary">Business News Sources</h3>
+    {{ macro.displaySourceList(business_sources)}} -->
+
+<!-- Entertainment News  -->
+<!-- <h3 class="text text-center text-primary">Entertainment News Sources</h3>
+    {{ macro.displaySourceList(entertainment_sources)}} -->
+
+
+ <!-- Health News  -->
+<!-- <h3 class="text text-center text-primary">Health News Sources</h3>
+{{ macro.displaySourceList(health_sources)}} -->
+
+
+<!-- Technology News  -->
+<!-- <h3 class="text text-center text-primary">Technology News Sources</h3>
+    {{ macro.displaySourceList(technology_sources)}} -->
+
+<!-- Sport News  -->
+    <!-- <h3 class="text text-center text-primary">Sports News Sources</h3>
+    {{ macro.displaySourceList(sports_sources)}} -->
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> News Highlight Website</title>
+    {% endif %}
+</head>
+
+<body>
+
+    <h3> Business News </h3>
+    <ul>
+        {% for business in business_sources %}
+        <li><h4>{{ business.name}}</h4></li>
+        <li>{{ business.description}}</li>
+        <button><a href="">View Article</a></button>
+
+        {% endfor %}
+    </ul> -->
+
+<!-- <h3> Entertainment News </h3>
+    <ul>
+        {% for entertainment in entertainment_sources %}
+        <li>{{ entertainment.name}}</li>
+        <li>{{ entertainment.description }}</li>
+
+        {% endfor %}
+    </ul>
+
+    <h3> Technology News </h3>
+    <ul>
+        {% for technology in technology_sources %}
+        <li>{{ technology.name}}</li>
+        <li>{{ technology.description}}</li>
+
+        {% endfor %}
+    </ul>
+
+    <h3>Sports News</h3>
+    <ul>
+        {% for sports in sports_sources %}
+        <li>{{ sports.name}}</li>
+        <li>{{ sports.description}}</li>
+
+        {% endfor %}
+    </ul> -->
+
+
+</body>
+
+</html>
