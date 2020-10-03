@@ -9,6 +9,7 @@ class Config:
     BOOKS_CATEGORY_BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q={}&key={}'
     # ARTICLES_BASE_URL = 'https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
     SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://username:password@localhost/books'
 
 class ProdConfig(Config):
     '''
