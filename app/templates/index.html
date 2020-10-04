@@ -13,7 +13,7 @@
                     <h4 class="card-title"><b>{{program.title}}</b></h4>
                     <span class="text-muted"> By: {{program.authors}}</span> <br><br>
                     <a href="{{program.previewLink}}" target="_blank" class="btn btn-primary">Book Preview</a>
-                   
+
                     <br><br>
                 </div>
             </div><br><br>
@@ -21,91 +21,11 @@
         {% endfor %}
 
     </div>
-    
+
 </div>
 
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    {% if title %}
-    <title> {{ title }}</title>
-    {% else %}
-    <title> News Highlight Website</title>
-    {% endif %}
-</head>
-
-<body>
-
-    <h3> Business News </h3>
-    <ul>
-        {% for business in business_sources %}
-        <li><h4>{{ business.name}}</h4></li>
-        <li>{{ business.description}}</li>
-        <button><a href="">View Article</a></button>
-
-        {% endfor %}
-    </ul> -->
-
-<!-- <h3> Entertainment News </h3>
-    <ul>
-        {% for entertainment in entertainment_sources %}
-        <li>{{ entertainment.name}}</li>
-        <li>{{ entertainment.description }}</li>
-
-        {% endfor %}
-    </ul>
-
-    <h3> Technology News </h3>
-    <ul>
-        {% for technology in technology_sources %}
-        <li>{{ technology.name}}</li>
-        <li>{{ technology.description}}</li>
-
-        {% endfor %}
-    </ul>
-
-    <h3>Sports News</h3>
-    <ul>
-        {% for sports in sports_sources %}
-        <li>{{ sports.name}}</li>
-        <li>{{ sports.description}}</li>
-
-        {% endfor %}
-    </ul> -->
 
 
 </body>
