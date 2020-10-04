@@ -8,7 +8,7 @@
 
 ## Description
 
-The Best General Programming Books.where teh user cann also have a orevier of the  book.
+The Best General Programming Books,where the user cann also have a overview of the  book.
 
 ### Prerequisites
 * python3.6
