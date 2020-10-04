@@ -49,7 +49,7 @@ The Best General Programming Books.where teh user cann also have a orevier of th
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
 |To display various books| Click the available books|Redirected to a page with a list of programming books |
-|Display the preview of the books| Book review| Redirected to the the news preview|
+|Display the preview of the books| Book review| Redirected to the the book preview|
 
 
 
