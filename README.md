@@ -2,32 +2,55 @@
 
 #### Author: [Peris Oduol](https://github.com/PerisOduol618)
 
-* Github repository: https://github.com/PerisOduol618/News-books-
+* Github repository: https://programmingbooks.herokuapp.com/books
 
-* Link to live site: https://peris-oduol-news-articles1.herokuapp.com/
+* Link to live site: https://programmingbooks.herokuapp.com/
 
 ## Description
 
-News Articles is an application that dispays a list different news sources from around the world.the user can click on the view the article to see the particular  news and the time it was ctreated.The user can also click on the read more to view the original news source.
+The Best General Programming Books.where teh user cann also have a orevier of the  book.
 
-## User Stories
-The user would like to.... :
-* See various news sources and select the ones they prefer  to view.
-* View all news sources from the source they selected.
-* See Image description and time the news article was created. 
-* Click on an article and read it fully from the news source
+### Prerequisites
+* python3.6
+* virtual environment
+* pip
 
+### Cloning
+* In your terminal:
+        
+        $ git clone https://github.com/PerisOduol618/Books.git
+        $ cd books
 
+## Running the Application
+* Install virtual environment using `$ python3.6 -m venv --without-pip virtual`
+* Activate virtual environment using `$ source virtual/bin/activate`
+* Download pip in our environment using `$ curl https://bootstrap.pypa.io/get-pip.py | python`
+* Install all the dependencies from the requirements.txt file by running `python3.6 pip install -r requirements.txt`
+* Create a `start.sh` file in the root of the folder and add the following code:
 
+        export MAIL_USERNAME=<your-email-address>
+        export MAIL_PASSWORD=<your-email-password>
+        export SECRET_KEY=<your-secret-key>
 
+* Edit the configuration instance in `manage.py` from `development` to `production`
+* To run the application, in your terminal:
 
+        $ chmod a+x start.sh
+        $ ./start.sh
+        
+## Testing the Application
+* To run the tests for the class file:
+
+        $ python3.6 manage.py server
+       
 
 
 ## Behaviour Driven Development
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-|To display various news sources| Click the View Article button|Redirected to a page with a list of articles from the source |
-|Display the articles for the news source selected| Click Read More link| Redirected to the news source's site to read the entire article|
+|To display various books| Click the available books|Redirected to a page with a list of programming books |
+|Display the preview of the books| Book review| Redirected to the the news preview|
+
 
 
 ## Built With
@@ -35,6 +58,10 @@ The user would like to.... :
 * [Python3.6](https://docs.python.org/3/)
 * Flask
 * Boostrap
+* HTML
+* CSS
+
+
 
 
 ## Support and contact details
