@@ -1,6 +1,7 @@
 import urllib.request
 import json
 from .models import Category
+import requests
 
 
 # Getting api key
@@ -55,10 +56,21 @@ def process_sources(sources_list):
         published_at = source_item['volumeInfo'].get('publishedDate')
         thumbnail = source_item['volumeInfo']['imageLinks'].get('thumbnail')
         previewLink = source_item['volumeInfo'].get('previewLink')
+       
         
-
-        sources_object = Category(title, authors, description, publisher, published_at, thumbnail, previewLink)
-        sources_results.append(sources_object)
+        
+        if thumbnail:
+            sources_object = Category(title, authors, description, publisher, published_at, thumbnail, previewLink)
+            sources_results.append(sources_object)
 
     return sources_results
+
+
+def get_blogQuotes():
+    """
+    Function that gets the json response to our url request
+    """
+    get_response = requests.get('http://quotes.stormconsultancy.co.uk/random.json').json()
+    return get_response
+
 
