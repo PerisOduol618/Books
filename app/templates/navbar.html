@@ -14,13 +14,8 @@
           <ul class="nav navbar-nav navbar-right">
             {% if current_user.is_authenticated %}
             <li style="color:white;padding:15px; font-family: 'Sansita Swashed', cursive;" >🙎 {{current_user.username | capitalize}}</li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false" style="font-family: 'Sansita Swashed', cursive;"> Account <span
-                        class="caret"></span></a>
-                <ul class="dropdown-menu ">       
-                    <!-- <li><a href="{{url_for('auth.logout')}}">Profile</a></li> -->
-                    <li><a href="{{url_for('auth.logout')}}" style="font-family: 'Sansita Swashed', cursive;">Sign out</a></li>
-                </ul>
+            <li><a href="{{url_for('auth.logout')}}"  role="button" aria-haspopup="true" aria-expanded="false" style="font-family: 'Sansita Swashed', cursive;">Sign out</a>
+                
             </li>
             {% else %}
             <li><a href="{{url_for('auth.login')}}" style="font-family: 'Sansita Swashed', cursive;">🙎‍♂️Sign in</a></li>

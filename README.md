@@ -1,8 +1,8 @@
-# News Articles
+# Books
 
 #### Author: [Peris Oduol](https://github.com/PerisOduol618)
 
-* Github repository: https://github.com/PerisOduol618/News-Articles-
+* Github repository: https://github.com/PerisOduol618/News-books-
 
 * Link to live site: https://peris-oduol-news-articles1.herokuapp.com/
 
