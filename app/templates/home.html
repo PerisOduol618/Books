@@ -1,6 +1,19 @@
 {% extends 'base.html'%}
 
 {% block content%}
-<h1>homepage</h1>
-<a href="{{url_for('main.index')}}" class="btn btn-primary btn-center">Available Books</a>
+<div class="home  text-center container-fluid" style="background-position: center;">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+
+    <h1 style="color: white;">Welcome to Programmig books</h1>
+    <a href="{{url_for('main.index')}}" class="btn btn-primary btn-center"
+        style="font-family: 'Sansita Swashed', cursive; box-shadow: 0 4px 8px 0 rgba(11, 10, 14, 0.87)">Available
+        Books</a><br><br>
+
+    <p style="color: white;">{{blogQuote.quote}}</p>
+
+    <p style="color: white;"><b>~ {{blogQuote.author}} ~</b> </p>
+    </div>
+
+</div>
 {%endblock%}
