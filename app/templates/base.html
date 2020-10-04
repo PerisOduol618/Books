@@ -1,6 +1,17 @@
 {% extends 'bootstrap/base.html'%}
 
+{%block styles%}
+{{ super()}}
+<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+
+{%endblock%}
+
 <!-- Navbar block  --> 
 {% block navbar %}
     {% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+
 {% endblock %}
