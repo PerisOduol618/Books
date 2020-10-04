@@ -5,11 +5,16 @@ class Config:
     General configuration parent class
     '''
     BOOKS_API_KEY= os.environ.get('BOOKS_API_KEY')
-    # BOOKS_CATEGORY_BASE_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
     BOOKS_CATEGORY_BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q={}&key={}'
-    # ARTICLES_BASE_URL = 'https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
     SECRET_KEY = os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://username:password@localhost/books'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/books'
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    #  email configurations
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 class ProdConfig(Config):
     '''

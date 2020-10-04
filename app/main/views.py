@@ -2,10 +2,17 @@ from flask import render_template,request,redirect,url_for
 from . import main
 from ..request import get_sources
 from ..models import Category
+from flask_login import login_required
 
 
-# Views
 @main.route('/')
+@login_required
+def home():
+
+    return render_template('home.html')
+
+@main.route('/books')
+@login_required
 def index():
 
     '''
@@ -13,9 +20,7 @@ def index():
     '''
     
     programming_books = get_sources('programming')
-    # education_books = get_sources['categories']
-    # business_books = get_sources('business')
-    # romantic_books = get_sources('romantic')
+  
 
    
     title = "Books"
@@ -25,14 +30,3 @@ def index():
 
 
 
-# @main.route('/sources/<id>')
-# def articles(id):
-
-#     '''
-#     View root page function that returns the articles page and its data
-#     '''
-    
-#     articles =get_articles(id)
-#     title = f'{id}'
-
-#     return render_template('articles.html', articles=articles, title=title)

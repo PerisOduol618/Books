@@ -9,15 +9,12 @@ api_key = None
 # Getting the book categories base url
 category_base_url = None
 
-# # Getting the news articles base url
-# articles_base_url = None
 
 
 def configure_request(app):
     global api_key, category_base_url
     api_key = app.config['BOOKS_API_KEY']
     category_base_url = app.config['BOOKS_CATEGORY_BASE_URL']
-    # articles_base_url = app.config['ARTICLES_BASE_URL']
 
 
 def get_sources(category):
@@ -48,18 +45,19 @@ def process_sources(sources_list):
              sources_results: A list of sources objects
      '''
     sources_results = []
-    print(sources_list)
+    
 
     for source_item in sources_list:
         title = source_item['volumeInfo'].get('title')
-        authors = source_item['volumeInfo'].get('authors')
+        authors = source_item['volumeInfo']['authors'][0]
         description = source_item['volumeInfo'].get('description')
         publisher = source_item['volumeInfo'].get('publisher')
         published_at = source_item['volumeInfo'].get('publishedDate')
         thumbnail = source_item['volumeInfo']['imageLinks'].get('thumbnail')
+        previewLink = source_item['volumeInfo'].get('previewLink')
         
 
-        sources_object = Category(title, authors, description, publisher, published_at, thumbnail)
+        sources_object = Category(title, authors, description, publisher, published_at, thumbnail, previewLink)
         sources_results.append(sources_object)
 
     return sources_results
