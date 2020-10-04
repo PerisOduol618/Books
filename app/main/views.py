@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..request import get_sources
+from ..request import get_sources, get_blogQuotes
 from ..models import Category
 from flask_login import login_required
 
@@ -8,8 +8,8 @@ from flask_login import login_required
 @main.route('/')
 @login_required
 def home():
-
-    return render_template('home.html')
+    blogQuote = get_blogQuotes()
+    return render_template('home.html', blogQuote=blogQuote)
 
 @main.route('/books')
 @login_required
